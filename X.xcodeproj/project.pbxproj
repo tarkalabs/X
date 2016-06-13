@@ -232,9 +232,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		21193C111AF043AB009FD090 /* X-OSX */ = {
+		21193C111AF043AB009FD090 /* X-macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 21193C281AF043AC009FD090 /* Build configuration list for PBXNativeTarget "X-OSX" */;
+			buildConfigurationList = 21193C281AF043AC009FD090 /* Build configuration list for PBXNativeTarget "X-macOS" */;
 			buildPhases = (
 				21193C0D1AF043AB009FD090 /* Sources */,
 				21193C0E1AF043AB009FD090 /* Frameworks */,
@@ -245,7 +245,7 @@
 			);
 			dependencies = (
 			);
-			name = "X-OSX";
+			name = "X-macOS";
 			productName = X;
 			productReference = 21193C121AF043AB009FD090 /* X.framework */;
 			productType = "com.apple.product-type.framework";
@@ -329,23 +329,35 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Sam Soffes";
 				TargetAttributes = {
 					21193C111AF043AB009FD090 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 676PZY29MZ;
+						DevelopmentTeamName = "Canvas Labs, Inc.";
+						LastSwiftMigration = 0800;
+						ProvisioningStyle = Automatic;
 					};
 					21193C381AF044AE009FD090 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = 676PZY29MZ;
+						DevelopmentTeamName = "Canvas Labs, Inc.";
+						LastSwiftMigration = 0800;
 					};
 					21B743381C03F24E00FF293C = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 676PZY29MZ;
+						DevelopmentTeamName = "Canvas Labs, Inc.";
 					};
 					21F28DA81B7AC48E009DD1E9 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 					21F28DBF1B7AC65F009DD1E9 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = 676PZY29MZ;
+						DevelopmentTeamName = "Canvas Labs, Inc.";
 					};
 				};
 			};
@@ -361,7 +373,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				21193C111AF043AB009FD090 /* X-OSX */,
+				21193C111AF043AB009FD090 /* X-macOS */,
 				21193C381AF044AE009FD090 /* X-iOS */,
 				21F28DBF1B7AC65F009DD1E9 /* X-watchOS */,
 				21B743381C03F24E00FF293C /* X-tvOS */,
@@ -492,7 +504,7 @@
 /* Begin PBXTargetDependency section */
 		21F28DB01B7AC48E009DD1E9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 21193C111AF043AB009FD090 /* X-OSX */;
+			target = 21193C111AF043AB009FD090 /* X-macOS */;
 			targetProxy = 21F28DAF1B7AC48E009DD1E9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -591,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -604,6 +617,7 @@
 				PRODUCT_NAME = X;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -611,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -623,6 +638,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.samsoffes.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = X;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -649,6 +666,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -670,6 +688,8 @@
 				PRODUCT_NAME = X;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -707,6 +727,7 @@
 				PRODUCT_NAME = X;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 3;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -721,6 +742,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.XTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -732,6 +754,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.samsoffes.XTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -768,6 +792,7 @@
 				PRODUCT_NAME = X;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -786,7 +811,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		21193C281AF043AC009FD090 /* Build configuration list for PBXNativeTarget "X-OSX" */ = {
+		21193C281AF043AC009FD090 /* Build configuration list for PBXNativeTarget "X-macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				21193C291AF043AC009FD090 /* Debug */,

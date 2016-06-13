@@ -10,7 +10,7 @@
 	import AppKit.NSFont
 	public typealias Font = NSFont
 
-	public struct FontDescriptorSymbolicTraits: OptionSetType {
+	public struct FontDescriptorSymbolicTraits: OptionSet {
 		public let rawValue: Int32
 
 		public init(rawValue: Int32) {
@@ -120,7 +120,7 @@
 extension Font {
 	public var fontWithMonoSpaceNumbers: Font {
 		#if os(OSX)
-			let fontDescriptor = self.fontDescriptor.fontDescriptorByAddingAttributes([
+			let fontDescriptor = self.fontDescriptor.addingAttributes([
 				NSFontFeatureSettingsAttribute: [
 					[
 						NSFontFeatureTypeIdentifierKey: kNumberSpacingType,
@@ -129,8 +129,19 @@ extension Font {
 				]
 			])
 			return Font(descriptor: fontDescriptor, size: pointSize) ?? self
+		#elseif os(watchOS)
+			let fontDescriptor = UIFontDescriptor(name: fontName, size: pointSize).addingAttributes([
+				UIFontDescriptorFeatureSettingsAttribute: [
+					[
+						UIFontFeatureTypeIdentifierKey: 6,
+						UIFontFeatureSelectorIdentifierKey: 0
+					]
+				]
+				])
+
+			return Font(descriptor: fontDescriptor, size: pointSize)
 		#else
-			let fontDescriptor = UIFontDescriptor(name: fontName, size: pointSize).fontDescriptorByAddingAttributes([
+			let fontDescriptor = UIFontDescriptor(name: fontName, size: pointSize).addingAttributes([
 				UIFontDescriptorFeatureSettingsAttribute: [
 					[
 						UIFontFeatureTypeIdentifierKey: kNumberSpacingType,

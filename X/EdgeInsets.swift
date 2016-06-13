@@ -8,7 +8,7 @@
 
 #if os(OSX)
 	import AppKit
-	public typealias EdgeInsets = NSEdgeInsets
+	public typealias EdgeInsets = Foundation.EdgeInsets
 #else
 	import UIKit
 	public typealias EdgeInsets = UIEdgeInsets
@@ -29,12 +29,12 @@ extension EdgeInsets {
 		return insets
 	}
 
-	public func insetRect(rect: CGRect) -> CGRect {
+	public func insetRect(_ rect: CGRect) -> CGRect {
 		#if os(iOS) || os(watchOS)
 			return UIEdgeInsetsInsetRect(rect, self)
 		#else
 			if (top + bottom > rect.size.height) || (left + right > rect.size.width) {
-				return CGRectNull
+				return CGRect.null
 			}
 
 			var insetRect = rect
