@@ -11,7 +11,7 @@
 	public typealias Image = NSImage
 
 	extension NSImage {
-		public var CGImage: CGImage! {
+		public var cgImage: CGImage! {
 			return cgImage(forProposedRect: nil, context: nil, hints: nil)
 		}
 

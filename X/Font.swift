@@ -25,31 +25,31 @@
 			var traits = FontDescriptorSymbolicTraits()
 
 			if symbolicTraits & UInt32(NSFontItalicTrait) == UInt32(NSFontItalicTrait) {
-				traits.insert(.TraitItalic)
+				traits.update(with: .TraitItalic)
 			}
 
 			if symbolicTraits & UInt32(NSFontBoldTrait) == UInt32(NSFontBoldTrait) {
-				traits.insert(.TraitBold)
+				traits.update(with: .TraitBold)
 			}
 
 			if symbolicTraits & UInt32(NSFontExpandedTrait) == UInt32(NSFontExpandedTrait) {
-				traits.insert(.TraitExpanded)
+				traits.update(with: .TraitExpanded)
 			}
 
 			if symbolicTraits & UInt32(NSFontCondensedTrait) == UInt32(NSFontCondensedTrait) {
-				traits.insert(.TraitCondensed)
+				traits.update(with: .TraitCondensed)
 			}
 
 			if symbolicTraits & UInt32(NSFontMonoSpaceTrait) == UInt32(NSFontMonoSpaceTrait) {
-				traits.insert(.TraitMonoSpace)
+				traits.update(with: .TraitMonoSpace)
 			}
 
 			if symbolicTraits & UInt32(NSFontVerticalTrait) == UInt32(NSFontVerticalTrait) {
-				traits.insert(.TraitVertical)
+				traits.update(with: .TraitVertical)
 			}
 
 			if symbolicTraits & UInt32(NSFontUIOptimizedTrait) == UInt32(NSFontUIOptimizedTrait) {
-				traits.insert(.TraitUIOptimized)
+				traits.update(with: .TraitUIOptimized)
 			}
 
 			self = traits
