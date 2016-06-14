@@ -349,6 +349,7 @@
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 676PZY29MZ;
 						DevelopmentTeamName = "Canvas Labs, Inc.";
+						LastSwiftMigration = 0800;
 					};
 					21F28DA81B7AC48E009DD1E9 = {
 						CreatedOnToolsVersion = 7.0;
@@ -709,6 +710,7 @@
 				PRODUCT_NAME = X;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -728,6 +730,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				VALIDATE_PRODUCT = YES;
 			};
