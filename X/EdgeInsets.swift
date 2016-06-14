@@ -14,14 +14,8 @@
 	public typealias EdgeInsets = UIEdgeInsets
 #endif
 
-public let EdgeInsetsZero = EdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-
 
 extension EdgeInsets {
-	public static var zero: EdgeInsets {
-		return EdgeInsetsZero
-	}
-
 	public var flipped: EdgeInsets {
 		var insets = self
 		insets.top = bottom
