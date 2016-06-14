@@ -137,8 +137,7 @@ extension Font {
 						UIFontFeatureSelectorIdentifierKey: 0
 					]
 				]
-				])
-
+			])
 			return Font(descriptor: fontDescriptor, size: pointSize)
 		#else
 			let fontDescriptor = UIFontDescriptor(name: fontName, size: pointSize).addingAttributes([
